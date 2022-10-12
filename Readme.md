@@ -174,3 +174,6 @@ Since, we have lot of scripts in our mono repo and so lerna run <command>. Also,
 We can use scripty to manage our scripts.
 It's a workspace dependency so we add `yarn add -DW scripty`.
 (on the blog)
+
+> When building multiples app in a single repo. Use ignore flag or scope to build.
+> [https://www.npmjs.com/package/@lerna/filter-options](lerna filter option)
