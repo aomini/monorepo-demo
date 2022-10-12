@@ -1,0 +1,17 @@
+{
+  "name": "@mono/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "scripty",
+    "lint": "scripty",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "test": "scripty"
+  },
+  "scripty": {
+    "path": "../../scripts/packages"
+  },
+  "author": "",
+  "license": "ISC"
+}

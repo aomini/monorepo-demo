@@ -1,0 +1,5 @@
+{
+  // Doesnt generated the js inside of the pakages
+  "files": [],
+  "references": [{ "path": "utils" }, { "path": "storefront" }]
+}
