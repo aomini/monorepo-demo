@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
+  "private": false,
   "scripts": {
     "build": "scripty",
     "lint": "scripty",
