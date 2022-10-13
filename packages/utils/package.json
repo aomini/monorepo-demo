@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "private": false,
   "scripts": {
+    "api-report": "scripty",
     "build": "scripty",
     "lint": "scripty",
     "clean": "rimraf dist *.tsbuildinfo",

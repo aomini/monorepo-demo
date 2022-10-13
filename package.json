@@ -10,6 +10,7 @@
     "packages/*"
   ],
   "scripts": {
+    "api-docs": "scripty",
     "build": "scripty",
     "clean": "scripty",
     "lint": "scripty",
@@ -22,6 +23,8 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@commitlint/config-lerna-scopes": "^17.0.2",
+    "@microsoft/api-documenter": "^7.19.19",
+    "@microsoft/api-extractor": "^7.33.1",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "commitlint": "^17.1.2",
