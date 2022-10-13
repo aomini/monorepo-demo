@@ -178,4 +178,12 @@ It's a workspace dependency so we add `yarn add -DW scripty`.
 > When building multiples app in a single repo. Use ignore flag or scope to build.
 > [https://www.npmjs.com/package/@lerna/filter-options](lerna filter option)
 
-- test commit
+## Publishing tags and Changelogs
+
+Lerna automatically publishes all of the packages.
+You can do `lerna version` and it tags all of the packages. If you have a version set on lerna.json config file then all of the packages updates accordingly.
+But with conventional commits you can generate changelogs when releasing a tag of packages.
+
+```bash
+lerna version --conventional-commits
+```
