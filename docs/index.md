@@ -9,5 +9,5 @@
 |  Package | Description |
 |  --- | --- |
 |  [@mono/demo](./demo.md) |  |
-|  [@mono/utils](./utils.md) |  |
+|  [@mono/utils](./utils.md) | <p><img src="https://webpack.js.org/site-logo.1fcab817090e78435061.svg" height="80" align="right" /></p><p><h3>Utilities</h3> <code>@mono/utils</code> is a package containing utilities or helper functions for the application. This package is managed by <b>FD-UTILITIES</b> Team.</p> |
 

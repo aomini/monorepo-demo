@@ -4,10 +4,19 @@
 
 ## utils package
 
+<img src="https://webpack.js.org/site-logo.1fcab817090e78435061.svg" height="80" align="right" />
+
+<h3>Utilities</h3> `@mono/utils` is a package containing utilities or helper functions for the application. This package is managed by <b>FD-UTILITIES</b> Team.
+
+## Remarks
+
+Assigned team <i>FD-UTILITIES</i>
+
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
-|  [print\_2](./utils.print_2.md) |  |
-|  [sum](./utils.sum.md) |  |
+|  [linkFunction](./utils.linkfunction.md) | A function that uses another function which returns typeof [sum](./utils.sum.md) |
+|  [print\_2](./utils.print_2.md) | <b><i>(BETA)</i></b> Print <code>new function demo</code> to the console |
+|  [sum](./utils.sum.md) | Adds the sum of two numbers where each parameters are of a specified type |
 

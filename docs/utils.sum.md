@@ -4,6 +4,12 @@
 
 ## sum variable
 
+> Warning: This API is now obsolete.
+> 
+> 
+
+Adds the sum of two numbers where each parameters are of a specified type
+
 <b>Signature:</b>
 
 ```typescript
