@@ -12,6 +12,18 @@
 
 Assigned team <i>FD-UTILITIES</i>
 
+## Enumerations
+
+|  Enumeration | Description |
+|  --- | --- |
+|  [WarningStyle](./utils.warningstyle.md) |  |
+
+## Interfaces
+
+|  Interface | Description |
+|  --- | --- |
+|  [IWarningOptions](./utils.iwarningoptions.md) |  |
+
 ## Variables
 
 |  Variable | Description |
