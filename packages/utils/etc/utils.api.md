@@ -9,6 +9,13 @@
 // @internal
 export const internalFunction: (a: number) => number;
 
+// @public (undocumented)
+export interface IWarningOptions {
+    cancellable?: boolean;
+    message: string;
+    warningStyle: WarningStyle;
+}
+
 // @public
 export const linkFunction: (x: number) => number;
 
@@ -18,5 +25,15 @@ export { print_2 as print }
 
 // @public @deprecated
 export const sum: (a: number, b: number) => number;
+
+// @public (undocumented)
+export enum WarningStyle {
+    // (undocumented)
+    DialogBox = 0,
+    // (undocumented)
+    LogOnly = 2,
+    // (undocumented)
+    StatusMessage = 1
+}
 
 ```
