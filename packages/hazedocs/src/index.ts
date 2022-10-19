@@ -44,6 +44,8 @@ const parseToHtml = async () => {
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,100&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
           </head>
           <body>
             <main>
@@ -57,6 +59,13 @@ const parseToHtml = async () => {
               const tables = document.querySelectorAll("table");
               tables.forEach((table) => {
                 table.classList.add("table");
+              });
+
+              /** Highlight */
+              document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('pre code').forEach((el) => {
+                  hljs.highlightElement(el);
+                });
               });
             </script>
           </body>
