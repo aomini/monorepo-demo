@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.settings.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "module": "es6",
+    "esModuleInterop": true,
+    "types": ["node"]
+  },
+  "include": ["src"]
+}
