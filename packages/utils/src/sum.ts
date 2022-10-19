@@ -1,3 +1,6 @@
+/**
+ * Warning Styles
+ */
 export enum WarningStyle {
   DialogBox,
   StatusMessage,
