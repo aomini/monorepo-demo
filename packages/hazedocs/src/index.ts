@@ -7,6 +7,8 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import redirect from "remark-redirect";
+import rehypeFormat from "rehype-format";
+import rehypeRaw from "rehype-raw";
 
 const mdFilesPath: string = path.resolve(process.cwd(), "../../docs");
 const reportPath: string = path.resolve(process.cwd(), "../../reports");
@@ -21,10 +23,12 @@ const parseToHtml = async () => {
     );
     const parsedObject = await unified()
       .use(remarkParse)
+      .use(remarkRehype, { allowDangerousHtml: true })
+      .use(rehypeRaw)
+      .use(rehypeFormat)
       .use(redirect as typeof remarkParse)
       .use(remarkFrontmatter)
       .use(remarkGfm)
-      .use(remarkRehype)
       .use(rehypeStringify)
       .process(extractedMarkdown);
     const HtmlData = String(parsedObject);
