@@ -597,3 +597,11 @@ Also, before we run the extractor we need to have `etc` folder in every packages
 ## Api Documentation
 
 > `yarn add -WD @microsoft/api-documenter`
+
+# Lerna individually
+
+lerna add eslint packages/eslint-config --dev
+
+# Create new package
+
+$ lerna create @mono/eslint-config
