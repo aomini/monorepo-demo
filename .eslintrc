@@ -22,5 +22,39 @@
 //   }
 // }
 {
-  "extends": ["rakeshshrestha", "rakeshshrestha/react", "rakeshshrestha/import"]
+  "extends": [
+    "rakeshshrestha",
+    "rakeshshrestha/react",
+    "rakeshshrestha/import"
+  ],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "react",
+            "group": "builtin"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "unknown",
+          "parent",
+          "type",
+          ["sibling", "index"],
+          "object"
+        ],
+        "newlines-between": "always-and-inside-groups"
+      }
+    ]
+  }
 }
