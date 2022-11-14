@@ -7,6 +7,10 @@ export enum WarningStyle {
   LogOnly,
 }
 
+export type EslintTest = {
+  target: (e: number) => void;
+};
+
 export interface IWarningOptions {
   /**
    * Determines how the warning will be displayed.
@@ -56,7 +60,7 @@ export const sum = (a: number, b: number) => a + b * 2;
  * print();
  * ```
  */
-export const print = () => console.log("new function demo");
+export const print = () => console.log('new function demo');
 
 /**
  * Internal Function
