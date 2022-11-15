@@ -17,7 +17,8 @@
     "test": "scripty"
   },
   "scripty": {
-    "path": "./scripts/workspace"
+    "path": "./scripts/workspace",
+    "windowsPath": "./scripts-win/workspace"
   },
   "devDependencies": {
     "@babel/eslint-plugin": "^7.19.1",
