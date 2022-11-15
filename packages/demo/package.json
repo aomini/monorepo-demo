@@ -12,7 +12,8 @@
     "test": "scripty"
   },
   "scripty": {
-    "path": "../../scripts/packages"
+    "path": "../../scripts/packages",
+    "windowsPath": "../../scripts-win/packages"
   },
   "author": "",
   "license": "ISC"
