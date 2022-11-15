@@ -1,17 +1,19 @@
-import path from "path";
-import fs from "fs/promises";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeStringify from "rehype-stringify";
-import redirect from "remark-redirect";
-import rehypeFormat from "rehype-format";
-import rehypeRaw from "rehype-raw";
+// eslint-disable-next-line import/order
+import fs from 'fs/promises';
+// eslint-disable-next-line import/order
+import path from 'path';
+import rehypeFormat from 'rehype-format';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkGfm from 'remark-gfm';
+import remarkParse from 'remark-parse';
+import redirect from 'remark-redirect';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
 
-const mdFilesPath: string = path.resolve(process.cwd(), "../../docs");
-const reportPath: string = path.resolve(process.cwd(), "../../reports");
+const mdFilesPath: string = path.resolve(process.cwd(), '../../docs');
+const reportPath: string = path.resolve(process.cwd(), '../../reports');
 
 const parseToHtml = async () => {
   const mdFiles = await fs.readdir(mdFilesPath);
@@ -19,7 +21,7 @@ const parseToHtml = async () => {
     const currentFile: string = mdFiles[i];
     const extractedMarkdown: string = await fs.readFile(
       `${mdFilesPath}/${currentFile}`,
-      "utf8"
+      'utf8'
     );
     const parsedObject = await unified()
       .use(remarkParse)
@@ -34,16 +36,17 @@ const parseToHtml = async () => {
     const HtmlData = String(parsedObject);
 
     const navbarComponent: string = await fs.readFile(
-      path.join(process.cwd() + "/src/components/navbar.html"),
-      "utf-8"
+      // eslint-disable-next-line prefer-template
+      path.join(process.cwd() + '/src/components/navbar.html'),
+      'utf-8'
     );
 
     await fs.writeFile(
-      `${reportPath}/${currentFile.replace("md", "html")}`,
+      `${reportPath}/${currentFile.replace('md', 'html')}`,
       ` 
         <html>
           <head>
-            <title>${currentFile.replace(".md", " | Ecommerce Docs")}</title>
+            <title>${currentFile.replace('.md', ' | Ecommerce Docs')}</title>
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,100&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -75,7 +78,7 @@ const parseToHtml = async () => {
           </body>
         </html>
       `,
-      "utf8"
+      'utf8'
     );
   }
 };
@@ -83,7 +86,7 @@ const parseToHtml = async () => {
 // Call the generator function
 parseToHtml()
   .then(() => {
-    console.log("REPORT GENERATED");
+    console.log('REPORT GENERATED');
   })
   .catch((e) => {
     console.error(e);
