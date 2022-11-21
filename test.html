@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      p {
+        font-size: 40px;
+        white-space: no-wrap;
+        resize: both;
+        overflow: auto;
+        /* position: relative;
+        display: inline; */
+      }
+
+      /* p > sup {
+        position: absolute;
+        display: block;
+        right: 0;
+        top: -1px;
+      } */
+
+      .wrapper {
+        white-space: no-wrap;
+        resize: both;
+        overflow: auto;
+        border: 1px solid gray;
+      }
+
+      .breakable-text {
+        display: inline;
+        white-space: no-wrap;
+      }
+
+      .no-break-before {
+        padding-left: 10px;
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <span class="breakable-text">sailracing is the best one sailracing 1</span
+      >&#8205;<span class="no-break-before">1</span>
+    </div>
+    <div>
+      <p class="wrapper">
+        sailracing is the best one sailracing 1<span class="hidden"
+          >sailracinasdfasdfg 1</span
+        ><sup class="no-break-before">1</sup
+        ><sup class="no-break-before">,</sup>
+      </p>
+    </div>
+  </body>
+</html>
