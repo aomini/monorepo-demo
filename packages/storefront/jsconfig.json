@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["src/components/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/Builder/*": ["src/Builder/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/config/*": ["src/config/*", "src/config/*.js"],
+      "@/utils/*": ["src/utils/*"],
+      "@/providers/*": ["src/providers/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/http/*": ["src/http/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/server-props-helpers/*": ["src/server-props-helpers/*"],
+      "@/modules/*": ["src/modules/*"]
+    },
+    "moduleResolution": "node",
+    "jsx": "react"
+  },
+  "exclude": ["node_modules"]
+}
